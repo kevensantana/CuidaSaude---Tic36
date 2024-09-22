@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: #577cf8;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px 30px;
+}
+
+h1, h2, h3 {
+  margin-bottom: 10px;
+}
+
+
+ul {
+  margin: 20px 0;
+  padding: 0;
+  list-style-type: square;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+ul li strong {
+  color: #27ae60;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+a {
+  text-decoration: none;
+  color: #2980b9;
+}
+
+a:hover {
+  color: #16a085;
+  text-decoration: none;
+}
+
+/* Menu */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #577cf8;
+  padding: 20px;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.links li a:hover {
+  color: #333;
+}
+
+.links a.active {
+  color: #333;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-icon span {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+}
+
+.content-section {
+  padding: 20px;
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+.inicio {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.titulo {
+  width: 50%;
+}
+
+.titulo h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.conteudo {
+  width: 50%;
+  text-align: justify;
+}
+
+.conteudo p {
+  font-size: 18px;
+}
+
+.info {
+  margin-top: 50px;
+}
+
+.info ul {
+  background-color: #ccc;
+  border-radius: 10px;
+  padding: 20px 40px;
+  align-items: center;
+}
+
+.col-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+
+  margin: 60px auto;
+}
+
+.col1 {
+  width: 50%;
+}
+
+.col1 img {
+  width: 100%;
+}
+
+.col2 {
+  padding: 10px 0;
+  width: 48%;
+}
+
+.col2 h3{
+  font-size: 20px;
+}
+
+.col2 p {
+  font-size: 20px;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+/* Calculadora */
+.imc-form {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+label {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #27ae60;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+button:hover {
+  background-color: #2ecc71;
+}
+
+.resultado {
+  background-color: white;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 10px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+
+.resultado p{
+  font-size: 1.2rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+  main {
+    padding: 10px;
+    margin: 20px auto;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: #577cf8;
+    width: 100%;
+    
+    text-align: center;
+  }
+  .links li a {
+    font-size: 25px;
+  }
+
+  .links.active {
+    display: flex;
+  }
+
+  body.menu-open{
+    overflow: hidden;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .inicio {
+    flex-direction: column;
+  }
+
+  .titulo, .conteudo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .col-box {
+    flex-direction: column;
+  }
+
+  .col1, .col2 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo h1 {
+    font-size: 36px;
+  }
+
+  .conteudo p {
+    font-size: 16px;
+  }
+
+  .links li a {
+    font-size: 18px;
+  }
+
+  .navbar {
+    padding: 15px;
+  }
+}
