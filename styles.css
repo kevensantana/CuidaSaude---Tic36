@@ -234,7 +234,8 @@ button:hover {
   background-color: white;
   max-width: 400px;
   margin: 40px auto;
-  padding: 10px 0;
+ 
+  height: 40px;
 
   display: flex;
   justify-content: center;
